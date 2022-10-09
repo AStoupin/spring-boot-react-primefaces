@@ -5,7 +5,7 @@ import "primereact/resources/primereact.css";
 import "primeflex/primeflex.css";
 
 import './App.css';
-import Home from './Home';
+
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { HashRouter } from "react-router-dom";
