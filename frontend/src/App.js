@@ -6,27 +6,22 @@ import "primeflex/primeflex.css";
 
 import './App.css';
 
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { HashRouter } from "react-router-dom";
+import {HashRouter,  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ClientList from './ClientList';
 import ClientEdit from "./ClientEdit";
 
 class App extends Component {
-  render() {
-    return (
+    render() {
+        return (
+            <HashRouter>
+                <Switch>
+                    <Route path='/' exact={true} component={ClientList}/>
+                    <Route path='/clients/:id' exact={true} component={ClientEdit}/>
 
-        <HashRouter>
-
-          <Switch>
-            <Route path='/' exact={true} component={ClientList}/>
-            <Route path='/clients/:id' exact={true} component={ClientEdit}/>
-
-          </Switch>
-
-        </HashRouter>
+                </Switch>
+            </HashRouter>
     )
-  }
+    }
 }
 
 export default App;
